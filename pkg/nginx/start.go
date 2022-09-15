@@ -78,7 +78,7 @@ func generateStaticTcpRoute() (err error) {
 	if err != nil {
 		return
 	}
-	err = os.Mkdir(filepath.FromSlash(path.NginxStaticTcpRouteDir), os.FileMode(0777))
+	err = os.MkdirAll(filepath.FromSlash(path.NginxStaticTcpRouteDir), os.FileMode(0777))
 	if err != nil {
 		util.Logger().Error("clean directory error")
 		return
